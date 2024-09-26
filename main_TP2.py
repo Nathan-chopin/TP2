@@ -5,15 +5,15 @@
 import fn_TP2 as fn
 
 
-phrase1 = "le joli chat mange."
-phrase2 = "le ,joli chat ; dort." # OK car on ne prend pas en compte les séparateurs
-phrase3 = "Jean dort."
-phrase4 = "la verte souris grosse petit mange le bleu verte chat petite."
+phrase1 = "le joli chat mange ."
+phrase2 = "le ,joli chat ; dort ." # OK car on ne prend pas en compte les séparateurs
+phrase3 = "jean dort ."
+phrase4 = "la verte souris grosse petite mange le bleu verte chat petite ."
 
 phrase5 = "."
 phrase6 = ""
-phrase7 = "le jolichat joue" # pas ’.’ fina
-phrase8 = "le joli chat joue." # ’joue’ inconnu
+phrase7 = "le joli chat joue" # pas ’.’ fina
+phrase8 = "le joli chat joue ." # ’joue’ inconnu
 
 
 #test :
