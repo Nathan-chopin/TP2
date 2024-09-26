@@ -1,6 +1,10 @@
 # fonction du TP2
 # Nathan Chopin
 # 26/09/24
+# l'implémentation de la lecture du fichier.txt (creation_dictionnaire()) ne fonctionne pas
+
+
+import os
 
 
 dictionnaire ={"le" : 0, "la" : 0, "chat" : 2, "souris" : 2, "martin" : 4,
@@ -45,19 +49,32 @@ def separation(list,caractere):
             list.remove(list[i - 1])
     return list
 
+############################################################################################################################################################################
+
+def creation_dictionnaire():
+    fichier = open("dico.txt","r")
+    dic = {}
+    for ligne in fichier.readlines():
+        for i in range(len(ligne)):
+            if ligne[i] == ' ':
+                dic[ligne[:i]] = int(ligne[i + 1:].rstrip())
+    fichier.close()
+    return dic
+
+print(creation_dictionnaire())
 #################################################################################################################################################################
 
 def correcteur(phrase):
     '''dit si une phrase est correcte ou pas'''
     etat = 0                # état et valeur associé au mot initiallement
     val_mot = 0
-
+    dictionnaire = creation_dictionnaire()
 
     def etat_final(etat = 0):
         '''renvois l'état final de cet automate'''
-        if etat != 9 or etat == 8:     
+        if etat == 9 or etat != 8:     
             print('phrase incorrecte') 
-            return False                # print pour informer l'utilisateur et renvois un bool pour de potentielle utilisation
+            return False                
         else :
             print("phrase correcte")
             return True
@@ -77,6 +94,4 @@ def correcteur(phrase):
                 val_mot = dictionnaire[mot]
                 etat = transition_etat[etat][val_mot]     # réalise un changement d'état
     return etat_final(etat)
-
-
 

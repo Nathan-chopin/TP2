@@ -32,3 +32,5 @@ fn.correcteur(phrase8)
 phrase = input('Rentre une phrase très simple stp: ')
 fn.correcteur(phrase)
 
+fn.correcteur('nathan code .')
+fn.correcteur('mael mange le fromage .')
