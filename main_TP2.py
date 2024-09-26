@@ -28,3 +28,7 @@ fn.correcteur(phrase5)
 fn.correcteur(phrase6)
 fn.correcteur(phrase7)
 fn.correcteur(phrase8)
+
+phrase = input('Rentre une phrase très simple stp: ')
+fn.correcteur(phrase)
+
