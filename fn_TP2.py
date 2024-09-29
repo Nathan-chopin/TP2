@@ -1,7 +1,7 @@
 # fonction du TP2
 # Nathan Chopin
 # 26/09/24
-# l'implémentation de la lecture du fichier.txt (creation_dictionnaire()) ne fonctionne pas
+# fini
 
 
 import os
@@ -72,7 +72,7 @@ def correcteur(phrase):
 
     def etat_final(etat = 0):
         '''renvois l'état final de cet automate'''
-        if etat == 9 or etat != 8:     
+        if etat != 9 or etat == 8:     
             print('phrase incorrecte') 
             return False                
         else :

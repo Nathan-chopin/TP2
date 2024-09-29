@@ -2,7 +2,7 @@ une 0
 un 0
 nathan 4
 mael 4
-fromagre 2
+fromage 2
 code 3
 le 0
 la 0
